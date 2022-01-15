@@ -1,0 +1,187 @@
+@import "../sass/componentes/base";
+
+.container {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    padding: 2rem 3rem;
+    &-left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem;
+        &-seccion {
+            width: 90%;
+            height: 80%;
+            padding: 1.5rem 1rem 0 1rem;
+            background-color: $color-oscuro;
+            border-radius: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__selector {
+                width: 90%;
+                height: 3.5rem;
+                display: flex;
+                justify-content: space-around;
+                border-bottom: 2px solid $color-secundario;
+                &__button {
+                    width: 10rem;
+                    height: 2.6rem;
+                    color: $color-claro;
+                    background-color: black;
+                    @include button
+                }
+                /* .border-pink {
+                    border: 2px solid red;
+                    background-color: $color-claro;
+                    color: $color-oscuro;
+                } */
+            }
+            &__input {
+                width: 22rem;
+                height: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $color-primario;
+                margin-top: 5px;
+                @include button;
+                span {
+                    width: 2rem;
+                    height: 2rem;
+                    background-image: url('/assets/search.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+                input {
+                    width: 18rem;
+                    height: 2rem;
+                    background-color: $color-primario;
+                    border: none;
+                    outline: none;
+                    padding-left: 1rem;
+                }
+            }
+            &-background {
+                width: 70%;
+                height: 75%;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: $color-claro;
+                border-radius: 4rem;
+                margin: 1rem 1rem 0 1rem;
+                &__list {
+                    width: 45%;
+                    height: 100%;
+                    margin: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    overflow-y: scroll;
+                    scroll-behavior: smooth;
+                    div {
+                        width: 90%;
+                        height: 3rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-bottom: 1px solid $color-oscuro;
+                        margin-bottom: 1.5rem;
+                        cursor: pointer;
+                    }
+                    div:hover {
+                        border-bottom: 1px solid $color-oscuro;
+                    }
+                    p {
+                        color: $color-secundario;
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                    }
+                }
+                &__list::-webkit-scrollbar{
+                    width: 5px;
+                }
+                &__list::-webkit-scrollbar-thumb {
+                    background: #ccc;
+                    border-radius: 4px;
+                }
+                &__list::-webkit-scrollbar-thumb:hover {
+                    background: #b3b3b3;
+                    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+                }
+                &__list::-webkit-scrollbar-thumb:active {
+                    background-color: #999999;
+                }
+                &__list::-webkit-scrollbar-track {
+                    background: #e1e1e1;
+                    border-radius: 4px;
+                }
+                &__list::-webkit-scrollbar-track:hover,
+                &__list::-webkit-scrollbar-track:active {
+                background: #d4d4d4;
+                }
+            }
+        }
+        &__button {
+            margin-top: 10px;
+            width: 100%;
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .button {
+                width: 10rem;
+                height: 3rem;
+                background-color: rgb(189, 39, 39);
+                color: $color-claro;
+                font-weight: 600;
+                font-size: 2rem;
+                @include button;
+            }
+        }
+    }
+    &-right {
+        @extend .container-left;
+        &__description {
+            width: 80%;
+            height: 60%;
+            padding: 0 2rem;
+            &__first {
+                margin-top: 2rem;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+            &__div {
+                margin-top: 2rem;
+                font-size: 1.2rem;
+            }
+            &__info {
+                margin-top: 3.5rem;
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+        }
+        &__schedule {
+            width: 80%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                width: 20rem;
+                height: 4rem;
+                background-color: greenyellow;
+                color: black;
+                font-weight: 600;
+                font-size: 2rem;
+                @include button;
+            }
+        }
+    }
+}

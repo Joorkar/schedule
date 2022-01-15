@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
+  <title>Home</title>
+</head>
+
+<body>
+  <section class="seccion-left">
+    <img src="./logo.png" alt="logo">
+    <h2>Toplane te ayudará a crear los horarios de clases o roles de trabajo para tu institución de manera rápida y
+      sencilla.</h2>
+  </section>
+  <section class="seccion-right">
+    <!-- 
+    <h3>Registrarte con tu cuenta de Google para comenzar a crear tus horarios de clases y roles de trabajo.</h3>
+
+
+    <h3>Comienza a crear tus horarios de clases y roles de trabajo.</h3>
+        -->
+    <h1>Condiciones de uso</h1>
+    <h3>Toplan es una aplicacion web temporalmente gratuita. Las cookies nos permiten ofrecer nuestros servicios. Al
+      utilizar nuestros servicios, aceptas el uso que hacemos de las cookies.
+    </h3>
+    <div class="seccion-right--st">
+      <img src="./Toplan.png" alt="Toplan">
+      <input onclick="goToplane()" type="button" value="Iniciar version beta">
+    </div>
+    <div class="seccion-right--nd">
+      <a href="*">Tutorial de uso</a>
+    </div>
+
+
+  </section>
+  <script>
+    function goToplane(){      
+      if (localStorage.getItem('uso')==null) {
+        localStorage.setItem('uso', 'true');
+      }
+      window.location.href = "html/api.html";
+    }   
+  </script>
+
+</body>
+
+</html>

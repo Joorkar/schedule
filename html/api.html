@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        if (localStorage.getItem('uso') == null) {
+            window.location.href = "../index.html";
+        } 
+    </script>
+    <meta charset="UTF-8">
+    <meta name="Description" content="Creador de horarios">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toplan</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img src="assets/Icon.png" alt="Logo de toPlan">
+        </div>
+        <nav>
+            <ul class="nav-right-section">
+                <li>
+                    <a class="underline" href="#">Soporte</a>
+                </li>
+                <li>
+                    <a class="underline" href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <article class="container-left">
+            <section class="container-left-seccion">
+                <div class="container-left-seccion__selector">
+                    <button class="container-left-seccion__selector__button" onclick="BtnColor('btnClases')"
+                        id="btnClases">Clases</button>
+                    <button class="container-left-seccion__selector__button" onclick="BtnColor('btnMaestros')"
+                        id="btnMaestros">Maestros</button>
+                    <button class="container-left-seccion__selector__button" onclick="BtnColor('btnSecciones')"
+                        id="btnSecciones">Secciones</button>
+                </div>
+                <div class="container-left-seccion__input">
+                    <span></span>
+                    <input type="text">
+                </div>
+                <div class="container-left-seccion-background">
+                    <div class="container-left-seccion-background__list" id="container-left-seccion-background__list">
+                    </div>
+                </div>
+            </section>
+            <div class="container-left__button">
+                <button class="button">Generar Horario</button>
+            </div>
+        </article>
+        <article class="container-right">
+            <div class="container-right__description" id="container-right__description"></div>
+            <div class="container-right__schedule">
+                <button>Generar Horario</button>
+            </div>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/main.js"></script>
+    <script>
+      //  document.getElementById("btnClases").click();
+    </script>
+</body>
+
+</html>
